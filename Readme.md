@@ -2,7 +2,7 @@
 Desarrollado por: [Monica Garcilazo](https://github.com/MoniGarcilazo)
 
 ## Requisitos previos
-> [IMPORTANT]
+> [!IMPORTANT]
 > Para poder hacer uso de la aplicación completa de Childrens Hospital es
 > necesario tener instaladas las siguientes tecnologías:
 

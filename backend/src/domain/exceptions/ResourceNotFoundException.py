@@ -1,2 +1,2 @@
-class ResourceNotFoundException:
+class ResourceNotFoundException(Exception):
     pass

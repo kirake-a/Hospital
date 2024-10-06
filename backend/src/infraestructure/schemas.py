@@ -22,13 +22,13 @@ class Patient(PatientBase):
     date_registration: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class PatientUpdateName(BaseModel):
     name: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class Response(BaseModel):
     mensaje: str

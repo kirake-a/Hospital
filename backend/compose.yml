@@ -1,0 +1,31 @@
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: hospital
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - mysql-app:/var/lib/mysql
+    healthcheck: # Docker que revise si MySQL está listo antes de permitir que otros servicios dependan de él
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+    networks:
+      - default
+
+  phpmyadmin:
+    image: 'phpmyadmin'
+    ports:
+      - 8081:80
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: password
+    depends_on:
+      - mysql
+
+volumes:
+  mysql-app:

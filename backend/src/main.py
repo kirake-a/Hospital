@@ -4,10 +4,11 @@ from starlette.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from src.infraestructure import schemas
 from src.infraestructure.database.session import engine
+#from src.api.routers.patient_router_old import patient_router
 from src.api.routers.patient_router import patient_router
-from src.infraestructure.entities import models
+from src.infraestructure.entities import patient_entity
 
-models.Base.metadata.create_all(bind=engine)
+patient_entity.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

@@ -1,2 +1,0 @@
-class ConflictWithExistingResourceException(Exception):
-    pass

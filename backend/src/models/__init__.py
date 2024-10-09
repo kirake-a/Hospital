@@ -1,0 +1,1 @@
+from src.models.patient_model import Patient

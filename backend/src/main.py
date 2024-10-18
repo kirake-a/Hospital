@@ -25,7 +25,7 @@ app = FastAPI(
     },
 )
 
-app.include_router(patient_router, prefix="/patient", tags=["Patient"])
+app.include_router(patient_router, prefix="/patients", tags=["Patient"])
 
 @app.get("/")
 def main():
